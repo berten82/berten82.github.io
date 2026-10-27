@@ -1,3 +1,9 @@
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Local migration archives and one-time import tools
+/migration/
+/import-old-site.ps1
+/scripts/import-content.mjs
+/files/README.md

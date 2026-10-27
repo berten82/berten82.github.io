@@ -1,0 +1,19 @@
+{
+  "title": "Opioid Policy and Intimate Partner Violence",
+  "summary_label": "Project summary",
+  "summary": [
+    "Intimate partner violence (IPV) is a significant public health problem adversely impacting the physical and mental health of victims and their children. It remains the most common form of violence experienced by women, with >30% of women in the U.S. experiencing physical or sexual IPV over their lifetime. An important risk factor associated with IPV perpetration is substance abuse, which can trigger aggressive behavior and worsen impulse control problems.",
+    "As use and misuse of both prescription (Rx) and non-Rx opioids have risen over the past two decades, this has engendered a public health crisis with far-reaching consequences for individuals, families and communities. One notable concern voiced by public health experts relates to the intersection of these two public health crises, and the role played by opioid misuse in facilitating IPV. Among men using opioids, prevalence of IPV perpetration ranged from 15% (past-year severe/physical IPV) to 58% (lifetime prevalence). Opioid use is also a risk factor for being a victim of IPV, with 32-75% of women opioid users reporting past year victimization.",
+    "Beyond correlational evidence on the co-occurrence of opioid use and IPV, the consequences of the opioid crisis for IPV have not been systematically explored. There is no causal evidence to date on the intersection of these two public health crises, and no studies on how interventions targeting opioid misuse are impacting IPV perpetration and victimization.",
+    "Our project is significant in providing the first analyses of downstream effects – positive or negative – of two supply-side interventions targeting the opioid epidemic on the risk of IPV perpetration and victimization:"
+  ],
+  "interventions": [
+    "prescription drug monitoring programs, designed to collect and monitor Rx opioid data for preventing its misuse and diversion into non-medical uses",
+    "the reformulation of OxyContin – one of the most popular Rx opioids for recreational use and abuse – into an abuse-deterrent form in 2010."
+  ],
+  "paper_ids": [
+    "from-treatment-to-safety-the-role-of-substance-use-treatment-in-preventing-intimate-partner-violence",
+    "from-addiction-to-aggression-the-spillover-effects-of-opioid-policies-on-intimate-partner-violence",
+    "fighting-abuse-with-prescription-tracking-mandatory-drug-monitoring-and-intimate-partner-violence"
+  ]
+}
