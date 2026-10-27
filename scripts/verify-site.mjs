@@ -16,7 +16,7 @@ for(const page of pages){
     if(/^(https?:|mailto:)/.test(url)) continue;
     checked++;
     const [file,hash]=url.split('#');
-    const target=path.join(root,decodeURIComponent(file||page));
+    const target=path.join(root,decodeURIComponent((file||page).split('?')[0]));
     try{
       const stat=await fs.stat(target);
       if(!stat.size) errors.push(`${page}: empty file ${url}`);

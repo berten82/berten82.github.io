@@ -1,8 +1,10 @@
 import fs from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
+import { createHash } from 'node:crypto';
 const root = fileURLToPath(new URL('../', import.meta.url));
 const read = async p => fs.readFile(path.join(root,p),'utf8');
+const stylesheetVersion = createHash('sha256').update(await read('style.css')).digest('hex').slice(0,12);
 const research = JSON.parse(await read('data/research.json'));
 const abstracts = JSON.parse(await read('data/abstracts.json'));
 const awards = JSON.parse(await read('data/awards.json'));
@@ -27,7 +29,7 @@ const nav = [['cv.html','CV'],['index.html#working-papers','Research'],['awards-
 const shell = (file,title,body) => `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)} | Bilge Erten</title><meta name="description" content="Bilge Erten, Associate Professor of Economics and International Affairs at Northeastern University. Research on gender, health, and development economics.">
-<link rel="icon" href="images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css"></head>
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="style.css?v=${stylesheetVersion}"></head>
 <body><a class="skip-link" href="#main">Skip to content</a><div class="site-shell">
 <header class="site-header"><a class="brand" href="index.html">Bilge Erten</a><nav aria-label="Main navigation">${nav.map(([url,label])=>`<a href="${url}"${file===url.split('#')[0]?' aria-current="page"':''}>${label}</a>`).join('')}</nav></header>
 <main id="main" class="site-main">${body}</main><footer><span>Bilge Erten · Northeastern University</span>${a('mailto:b.erten@northeastern.edu','b.erten@northeastern.edu')}</footer></div></body></html>\n`;
